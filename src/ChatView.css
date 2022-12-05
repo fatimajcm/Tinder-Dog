@@ -1,0 +1,31 @@
+.chatView{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 70px;
+    border-bottom: 1px solid #fafafa;
+}
+
+.cvDetalles{
+    flex: 1;
+
+}
+.cvDetalles > p{
+    color: gray;
+
+}
+
+.cvImg{
+    margin-right: 20px;
+}
+
+.cvTime{
+    color: rgb(160, 155, 155);
+
+}
+
+a{
+    text-decoration: none;
+    color: inherit
+}
