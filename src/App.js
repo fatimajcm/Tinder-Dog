@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
 
-      <Router>
+  <Router>
         <Routes>
           
           <Route path="/chat/:user" element={<><Header backBtn="/chats"/><IndividualChat/></>}>
