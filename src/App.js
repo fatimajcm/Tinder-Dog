@@ -2,16 +2,16 @@
 /* switch is replaced with Routes*/
 
 import './App.css';
-import Header from './Header';
+import Header from './js/Header';
 import { 
   BrowserRouter as Router, 
   Routes,
   Route,
   Link } from "react-router-dom";
-import TarjetasTinder from './TarjetasTinder';
-import BotonesSwipe from './BotonesSwipe';
-import ListadoChats from './ListadoChats';
-import IndividualChat from './IndividualChat';
+import TarjetasTinder from './js/TarjetasTinder';
+import BotonesSwipe from './js/BotonesSwipe';
+import ListadoChats from './js/ListadoChats';
+import IndividualChat from './js/IndividualChat';
 
 // <Switch> is replaced by <Routes>
 

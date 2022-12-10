@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import { Avatar } from '@material-ui/core';
-import './IndivChat.css'
+import '../css/IndivChat.css'
 
 function IndividualChat() {
 

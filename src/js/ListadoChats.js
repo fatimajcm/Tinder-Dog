@@ -1,5 +1,6 @@
 import React from 'react'
 import ChatView from './ChatView'
+import '../css/ListadoChat.css'
 
 //var ChatView = require('./ChatView');
 

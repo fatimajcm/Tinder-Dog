@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 import React, {useState} from 'react'
-import './TarjetasTinder.css'
+import '../css/TarjetasTinder.css'
 import TarjetaDog from 'react-tinder-card';
 
 function TarjetasTinder() {

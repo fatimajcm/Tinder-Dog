@@ -7,7 +7,7 @@ import FlashOnIcon from '@material-ui/icons/FlashOn';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import StarIcon from '@material-ui/icons/Star';
 import { IconButton } from '@material-ui/core';
-import './BotonesSwipe.css'
+import '../css/BotonesSwipe.css'
 
 
 function BotonesSwipe() {
