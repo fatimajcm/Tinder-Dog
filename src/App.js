@@ -23,7 +23,7 @@ function App() {
   <Router>
         <Routes>
           
-          <Route path='/' element={<Home/>}></Route>
+          <Route path='*' element={<Home/>}></Route>
 
           <Route path="/chat/:user" element={<><Header backBtn="/chats"/><IndividualChat/></>}>
           </Route>

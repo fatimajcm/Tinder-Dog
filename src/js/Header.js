@@ -10,7 +10,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
 
 function Haeder({backBtn}) {
 
-  //In r/eact-router-dom v6 useHistory() is replaced by useNavigate().
+  //In react-router-dom v6 useHistory() is replaced by useNavigate().
   const historial = useNavigate();
 
   return (
