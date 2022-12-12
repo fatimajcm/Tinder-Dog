@@ -6,7 +6,7 @@ import '../css/ListadoChat.css'
 
 function ListadoChats() {
   return (
-    <div className='chatsList'>
+    <div className="chatsList">
         <ChatView
             nombre= "Maria"
             mensaje= "Hola como estas?"
