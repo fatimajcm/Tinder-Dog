@@ -3,8 +3,12 @@
 import React, {useState} from 'react'
 import '../css/TarjetasTinder.css'
 import TarjetaDog from 'react-tinder-card';
+import { useAuth } from '../context/authContext';
 
 function TarjetasTinder() {
+
+  const {user} = useAuth()
+  console.log(user)
 
   const [dog,setDog] = useState([
   {

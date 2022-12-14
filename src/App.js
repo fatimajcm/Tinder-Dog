@@ -13,14 +13,19 @@ import Header from './js/Header';
 import ListadoChats from './js/ListadoChats';
 import IndividualChat from './js/IndividualChat';
 import Home from './js/Home';
+import { Login } from './js/Login';
+import { AuthProvider } from './context/authContext';
+import { CreateAcount } from './js/CreateAcount';
 
 // <Switch> is replaced by <Routes>
 
 function App() {
   return (
-    <div className="App">
 
-  <Router>
+    
+    <div className="App">
+      <AuthProvider>
+      <Router>
         <Routes>
           
           <Route path='*' element={<Home/>}></Route>
@@ -31,14 +36,25 @@ function App() {
           <Route path="/chats" element={<><Header backBtn="/"/><ListadoChats/></>}>
           </Route>
           
-          {/* This is the link to the Home page with path="/"  */}
           <Route path="/start" element={<><Header/><TarjetasTinder/><BotonesSwipe/></>}>
           </Route> 
 
+          <Route path="/login" element={<Login/>}>
+          </Route>
+
+          <Route path="/createAcount" element={<CreateAcount/>}>
+          </Route>
+
         </Routes>
       </Router>
+      </AuthProvider>
+
+  
 
     </div>
+    
+
+
   );
 }
 

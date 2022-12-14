@@ -12,14 +12,22 @@ import {
 import TarjetasTinder from './TarjetasTinder';
 import BotonesSwipe from './BotonesSwipe';
 import Header from './Header';
+import Auth from '../Auth';
+import { CreateAcount } from './CreateAcount';
+
 
 function Home(){
+
 
     const navigate = useNavigate();
 
     const handleClick = () => {
-       navigate('/start')
+       navigate('/createAcount')
     }
+
+    const handleClickLogin = () => {
+        navigate('/login')
+     }
 
   return (
     <div className="home">
@@ -32,8 +40,8 @@ function Home(){
 
         <div className="content">
             <h1 className='title'>TinderDog®</h1>
-            <button className="signBtn" onClick={handleClick}>
-                Sign
+            <button className="signBtn" onClick={handleClickLogin}>
+                Sign in
             </button>
             
             <button className="LogInBtn" onClick={handleClick}>
@@ -44,6 +52,11 @@ function Home(){
         <Routes>
             <Route path="/start" element={<><Header/><TarjetasTinder/><BotonesSwipe/></>}>
                 </Route>
+                <Route path="/login" element={<><Header/><Auth/></>}>
+                    
+          </Route>
+          <Route path="/createAcount" element={<CreateAcount/>}>
+          </Route>
         </Routes>
 
         </div>
