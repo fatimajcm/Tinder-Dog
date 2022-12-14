@@ -29,6 +29,10 @@ function Home(){
         navigate('/login')
      }
 
+    const handleClickPagina = () =>{
+        navigate('/start')
+    }
+
   return (
     <div className="home">
 
@@ -46,6 +50,10 @@ function Home(){
             
             <button className="LogInBtn" onClick={handleClick}>
                 Create Accout
+            </button>
+
+            <button className="LogInBtn" onClick={handleClickPagina}>
+                entrar
             </button>
 
             

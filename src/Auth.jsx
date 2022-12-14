@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React, {useState} from "react";
 import 'firebase/auth';
 import { useFirebaseApp } from "reactfire"; 
