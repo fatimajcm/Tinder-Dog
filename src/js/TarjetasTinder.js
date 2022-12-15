@@ -1,14 +1,28 @@
 /* eslint-disable no-unused-vars */
 
-import React, {useState} from 'react'
+import React, {useState,useContext} from 'react'
 import '../css/TarjetasTinder.css'
 import TarjetaDog from 'react-tinder-card';
 import { useAuth } from '../context/authContext';
+import {auth,db} from '../firebase-config'
+import {signOut}from 'firebase/auth'
+import { Link } from 'react-router-dom';
+import {updateDoc,doc} from 'firebase/firestore'
+import { useNavigate } from "react-router";
 
 function TarjetasTinder() {
+  
+  const navigate = useNavigate()
+  const handlesignOut=async()=>{
+    await updateDoc(doc(db,"users",auth.currentUser.uid),{
+      isOnline:false,
+
+    })
+    await signOut(auth);
+  }
 
   const {user} = useAuth()
-  console.log(user)
+  
 
   const [dog,setDog] = useState([
   {
@@ -43,6 +57,7 @@ function TarjetasTinder() {
 
   return (
     <div className="tarjetasTinder">
+     
         <div className="tarjetasTinder_contenedor ">
             {dog.map(dog => (
 
@@ -59,7 +74,22 @@ function TarjetasTinder() {
 
                 </TarjetaDog>
             ))}
+         
         </div>
+      
+    
+    <div className='Logout'>
+        {auth.currentUser ?(
+      <>
+       <button className='button'onClick={handlesignOut}>Salir</button>
+          
+          </>):(
+          <>
+          <Link to={'/'}>
+            
+          </Link>
+          </>)}
+          </div>
     </div>
   )
 }

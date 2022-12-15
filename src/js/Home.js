@@ -14,6 +14,7 @@ import BotonesSwipe from './BotonesSwipe';
 import Header from './Header';
 import Auth from '../Auth';
 import { CreateAcount } from './CreateAcount';
+import Login from './Login';
 
 
 function Home(){
@@ -52,7 +53,7 @@ function Home(){
         <Routes>
             <Route path="/start" element={<><Header/><TarjetasTinder/><BotonesSwipe/></>}>
                 </Route>
-                <Route path="/login" element={<><Header/><Auth/></>}>
+                <Route path="/login" element={<><Header/><Login/></>}>
                     
           </Route>
           <Route path="/createAcount" element={<CreateAcount/>}>

@@ -8,6 +8,8 @@
 }
 
 .cvDetalles{
+    display: flex;
+    align-items: center;
     flex: 1;
 
 }
@@ -28,4 +30,67 @@
 a{
     text-decoration: none;
     color: inherit
+}
+
+.user{
+    margin-top: 10px;
+    border-right: 2px solid var(#cb3333);  
+    overflow-y: auto;
+ }
+ .user_status{
+    width:10px;
+    height: 10px;
+    border-radius: 50%;
+ }
+
+.online{
+    background-color: green;
+}
+
+.offline{
+    background-color: red;
+}
+
+.messagec{
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid var(#cb3333);
+}
+.chatcotainer{
+    position:relative;
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    overflow: hidden;
+    height: calc(100vh - 70px);
+    width: 100vw;
+}
+
+.users{
+    margin-top:10px ;
+    border-right:2px solid var(#cb3333);
+    overflow-y: auto;
+}
+
+.messageform{
+    position: absolute;
+    bottom:30%;
+    left:20%;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.messageform input{
+    width: 40vw;
+    margin: 0px 10px;
+    padding:10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    
+}
+
+.messageform.btn{
+    margin-top: -10px;
 }

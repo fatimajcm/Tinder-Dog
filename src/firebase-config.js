@@ -1,15 +1,22 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import  {getFirestore} from 'firebase/firestore'
+import{getStorage}from'firebase/storage'
 
-const  firebaseConfig = {
-    apiKey: "AIzaSyCO96QjKaiwSEqfhFPJQFpafNct5yesjgU",
-    authDomain: "tinderdog-8a371.firebaseapp.com",
-    projectId: "tinderdog-8a371",
-    storageBucket: "tinderdog-8a371.appspot.com",
-    messagingSenderId: "334102229264",
-    appId: "1:334102229264:web:ce7f9c6d69fba9e659b595",
-    measurementId: "G-RXFCNRDZWF"
-};
 
-export const app = initializeApp(firebaseConfig);
+const firebaseConfig = {
+    apiKey: "AIzaSyBMY6lN3HpzSZsgJ1RlSXS_1dGeXPGxaII",
+    authDomain: "mascotagramr1.firebaseapp.com",
+    databaseURL:"http://mascotagramr1.firebaseio.com",
+    projectId: "mascotagramr1",
+    storageBucket: "mascotagramr1.appspot.com",
+    messagingSenderId: "694588520587",
+    appId: "1:694588520587:web:84b8192fc46d0a5c6e7c8e"
+  };
+
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+export const db=getFirestore(app)
 export const auth = getAuth(app)
+export const storage=getStorage(app)
