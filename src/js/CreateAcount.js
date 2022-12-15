@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import{createUserWithEmailAndPassword}from 'firebase/auth';
 import {auth,db} from '../firebase-config'
 
 import {setDoc,doc,Timestamp } from 'firebase/firestore';
+=======
+/* eslint-disable no-unused-vars */
+import { useState } from "react"
+import { useAuth } from "../context/authContext";
+>>>>>>> fe053409412de5fd6530a46f176d2a56beca4fe8
 import { useNavigate } from "react-router";
 import '../css/createaccount.css';
 

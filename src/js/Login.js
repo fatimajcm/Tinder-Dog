@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState } from "react"
+import { useAuth } from "../context/authContext";
 import{signInWithEmailAndPassword}from 'firebase/auth';
 import {auth,db} from '../firebase-config'
 import {updateDoc,doc } from 'firebase/firestore';
